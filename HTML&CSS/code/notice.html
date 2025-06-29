@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>notice</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      padding: 30px;
+    }
+    table {
+      border-collapse: collapse;
+      border-top: 3px solid black;
+      margin-top: 10px;
+    }
+    td {
+      border-bottom: 1px solid #cccccc;
+      padding: 10px;
+    }
+    .col1 {
+      width: 80px;
+    }
+    input {
+      width: 500px;
+      height: 25px;
+    }
+    textarea {
+      width: 500px;
+      height: 100px;
+    }
+    .buttons {
+      width: 620px;
+      text-align: right;
+      margin-top: 20px;
+    }
+    button {
+      padding: 5px 20px;
+      margin-left: 3px;
+    }
+  </style>
+  <body>
+    <h3>게시판 글쓰기 폼</h3>
+    <form>
+      <table>
+        <tr>
+          <td class="col1">이름</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td>제목</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td>글 내용</td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td>파일</td>
+          <td><input type="file" /></td>
+        </tr>
+      </table>
+      <div class="buttons">
+        <button type="submit">저장하기</button>
+        <button type="submit">목록보기</button>
+      </div>
+    </form>
+  </body>
+</html>
