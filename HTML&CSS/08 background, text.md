@@ -4,13 +4,13 @@
 
 ---
 
-| 속성                 | 설명                         | value                   | | |
+| 속성                 | 설명                         | value                   |            |                   |                      |
 | -------------------- | ---------------------------- | ----------------------- | -------- | ------------------ | --------------------- |
 | backgound-color      | 배경 색 설정                 | red                     | #eeeeee  | rgb(75, 0, 130)    | rgba(75, 0, 130, 0.5) |
 | backgound-image      | 이미지 설정                  | url(”이미지 위치 주소”) |
 | backgound-repeat     | 배경 이미지 반복 여부 설정   | repeat                  | repeat-x | repeat-y           | no-repeat             |
 | backgound-position   | 배경 이미지의 위치 설정      | left top                | center   | left 50px top 20px | 25% 75%               |
-| backgound-attachment | 배경 이미지의 고정 여부 설정 | scroll                  | fixed    | auto               |
+| backgound-attachment | 배경 이미지의 고정 여부 설정 | scroll                  | fixed    | auto               |                        |
 
 ### text
 
