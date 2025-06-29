@@ -45,12 +45,14 @@ padding-left
 
 내용과 패딩 영역을 둘러싸는 테두리 스타일을 설정
 
-| 속성         | 설명                     |                 |
-| ------------ | ------------------------ | --------------- |
-| border       | width, sytle, color 순서 |                 |
-| border-style | 테두리 모양 설정         |                 |
-| border-width | 테두리 두께 설정         | px, ghin, ghick |
-| border-color | 테두리 색상 설정         |                 |
+| 속성          | 설명                     |                 |
+| ------------- | ------------------------ | --------------- |
+| border        | width, sytle, color 순서 |                 |
+| border-style  | 테두리 모양 설정         |                 |
+| border-width  | 테두리 두께 설정         | px, ghin, ghick |
+| border-color  | 테두리 색상 설정         |                 |
+| border-radius | 테두리 모서리 둥글게     | px, %           |
+| box-shadow    | 그림자 효과              |                 |
 
 **border-style 속성**
 
@@ -60,7 +62,7 @@ dashed : 대쉬 점선
 
 solid : 실성
 
-double : 이중 실성
+double : 이중 실선
 
 groove : 3차원인 입체적인 선으로 설정하며, border-color 속성값에 영향을 받음.
 
