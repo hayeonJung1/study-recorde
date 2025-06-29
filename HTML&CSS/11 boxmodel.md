@@ -60,7 +60,7 @@ dashed : 대쉬 점선
 
 solid : 실성
 
-double : 이중 실성
+double : 이중 실선
 
 groove : 3차원인 입체적인 선으로 설정하며, border-color 속성값에 영향을 받음.
 
