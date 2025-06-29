@@ -4,13 +4,13 @@
 selector{ property: value; property: value;,...}
 ```
 
-### 전체 선택자(*)
+### 전체 선택자(\*)
 
 🔹 HTML 요소 전체를 선택하는 선택자
 
 ```css
-*{
-	/*css code*/
+* {
+  /*css code*/
 }
 ```
 
@@ -20,7 +20,7 @@ selector{ property: value; property: value;,...}
 
 ```css
 header {
-    /*header css code*/
+  /*header css code*/
 }
 ```
 
@@ -38,7 +38,7 @@ header {
 
 /*css*/
 .name {
-    color:green;
+  color: green;
 }
 ```
 
@@ -56,7 +56,7 @@ header {
 
 /*css*/
 #title {
-    color:red;
+  color: red;
 }
 ```
 
@@ -65,8 +65,8 @@ header {
 🔹 하위의 모든 지정 태그의 영역 선택
 
 ```css
-div p{
-    /*p css code*/
+div p {
+  /*p css code*/
 }
 ```
 
@@ -75,16 +75,17 @@ div p{
 🔹 지정된 속성을 갖는 모든 요소를 선택
 
 ```css
-a[href]{     
-		/*css code*/
+a[href] {
+  /*css code*/
 }
-input[text]{
-    /*css code*/
+input[text] {
+  /*css code*/
 }
 ```
 
 ### 자손, 자식, 동위 선택자
 
+| selector | 표시 | 설명 |
 | 자손(=후손 =하위) 선택자 | 공백 | 조상 요소 하위의 모든 요소 |
 | --- | --- | --- |
 | 자식 선택자(주로 많이 사용) | > | 부모 요소 하위의 자식 요소 |
