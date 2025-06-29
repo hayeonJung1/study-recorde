@@ -51,6 +51,8 @@ padding-left
 | border-style | 테두리 모양 설정 |  |
 | border-width | 테두리 두께 설정 | px, ghin, ghick |
 | border-color | 테두리 색상 설정 |  |
+| border-radius | 테두리 모서리 둥글게 | px, % |
+| box-shadow | 그림자 효과 | |
 
 **border-style 속성**
 
