@@ -2,68 +2,133 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>회원가입 폼</title>
+    <meta name="viewport" content="width=], initial-scale=1.0" />
+    <title>sign up</title>
   </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style-type: none;
+    }
+    h3,
+    .join {
+      margin: 20px 0 0 30px;
+    }
+    .join {
+      border-top: 1px solid #cccccc;
+      border-bottom: 1px solid #cccccc;
+      padding: 20px;
+      width: 480px;
+    }
+    .cols {
+      padding: 5px; /*요소간 간격*/
+    }
+    .cols li {
+      display: inline-block;
+    }
+    .col1 {
+      width: 120px;
+    }
+    .col2 input,
+    select {
+      width: 200px;
+      height: 28px;
+    }
+    .email input {
+      width: 100px;
+      height: 25px;
+    }
+    textarea {
+      width: 328px;
+      height: 100px;
+    }
+    .hello {
+      vertical-align: top; /*수직 방향 정렬*/
+    }
+    .buttons {
+      width: 510px;
+      text-align: right;
+    }
+    .buttons button {
+      padding: 8px 20px;
+      margin-top: 20px;
+    }
+  </style>
   <body>
-    <h3>회원 가입</h3>
-    <table>
-      <tr>
-        <td>아이디</td>
-        <td><input type="text" autofocus /></td>
-      </tr>
-      <tr>
-        <td>이름</td>
-        <td><input type="text" /></td>
-      </tr>
-      <tr>
-        <td>비밀번호</td>
-        <td><input type="password" /></td>
-      </tr>
-      <tr>
-        <td>비밀번호 확인</td>
-        <td><input type="password" /></td>
-      </tr>
-      <tr>
-        <td>전화번호</td>
-        <td><input type="text" placeholder="010-1234-1234" /></td>
-      </tr>
-      <tr>
-        <td>이메일</td>
-        <td>
-          <input type="text" />@
-          <select>
-            <option>직접입력</option>
-            <option>naver.com</option>
-            <option>gmail.com</option>
-            <option>hanmail.net</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>문자수신 여부</td>
-        <td>
-          <input type="radio" name="message" checked />예
-          <input type="radio" name="message" />아니오
-        </td>
-      </tr>
-      <tr>
-        <td>가입 경로</td>
-        <td>
-          <input type="checkbox" name="item1" />친구 소개
-          <input type="checkbox" name="item2" />인터넷 검색
-          <input type="checkbox" name="item3" />블로그
-          <input type="checkbox" name="item4" />기타
-        </td>
-      </tr>
-      <tr>
-        <td>기타</td>
-        <td><input type="text" value="RE:" /></td>
-      </tr>
-      <tr>
-        <td>내용</td>
-        <td><textarea cols="80" rows="8"></textarea></td>
-      </tr>
-    </table>
+    <h3>회원가입</h3>
+    <form>
+      <ul class="join">
+        <li>
+          <ul class="cols">
+            <li class="col1">아이디</li>
+            <li class="col2"><input type="text" /></li>
+          </ul>
+        </li>
+        <li>
+          <ul class="cols">
+            <li class="col1">비밀번호</li>
+            <li class="col2"><input type="password" /></li>
+          </ul>
+        </li>
+        <li>
+          <ul class="cols">
+            <li class="col1">비밀번호 확인</li>
+            <li class="col2"><input type="password" /></li>
+          </ul>
+        </li>
+        <li>
+          <ul class="cols">
+            <li class="col1">이름</li>
+            <li class="col2"><input type="text" /></li>
+          </ul>
+        </li>
+        <li>
+          <ul class="cols">
+            <li class="col1">이메일</li>
+            <li class="email">
+              <input type="email" />@
+              <select>
+                <option>직접입력</option>
+                <option>naver.com</option>
+                <option>hanmail.net</option>
+                <option>gmail.com</option>
+              </select>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="cols">
+            <li class="col1">이메일 수신</li>
+            <li>
+              <input type="radio" checked />비수신 <input type="radio" />수신
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="cols">
+            <li class="col1">가입 경로</li>
+            <li>
+              <input type="checkbox" />친구 추천 <input type="checkbox" />인터넷
+              검색 <input type="checkbox" checked />기타
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="cols">
+            <li class="col1 hello">인사말</li>
+            <li>
+              <textarea></textarea>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="buttons">
+        <button type="submit">저장하기</button>
+        <button type="reset">취소하기</button>
+      </div>
+    </form>
   </body>
 </html>

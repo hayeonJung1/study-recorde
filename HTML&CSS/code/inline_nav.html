@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>display: inline을 이용한 수평목록</title>
+  </head>
+  <style>
+    ul {
+      background-color: green;
+      text-align: center;
+      color: white;
+      padding: 10px;
+    }
+    li {
+      display: inline; /*수평 정렬*/
+      margin-left: 20px;
+    }
+    a:link,
+    a:visited,
+    a:active {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      color: orange;
+      text-decoration: underline;
+    }
+  </style>
+  <body>
+    <h3>수평 방향 목록 만들기</h3>
+    <ul>
+      <li><a href="#">회사 소개</a></li>
+      <li>|</li>
+      <li><a href="#">제품 소개</a></li>
+      <li>|</li>
+      <li><a href="#">고객 센터</a></li>
+      <li>|</li>
+      <li><a href="#">찾아 오시는 길</a></li>
+    </ul>
+  </body>
+</html>
