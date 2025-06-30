@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시멘틱 태그 레이아웃</title>
+  </head>
+  <style>
+    .container {
+      width: 1400px;
+      margin: 0 auto;
+    }
+    header {
+      height: 60px;
+      background-color: #dddddd;
+    }
+    aside {
+      width: 400px;
+      height: 300px;
+      float: left;
+      background-color: pink;
+    }
+    section {
+      width: 1000px;
+      height: 300px;
+      float: right;
+      background-color: yellow;
+    }
+    footer {
+      clear: both;
+      height: 60px;
+      background-color: #dddddd;
+    }
+    header,
+    aside,
+    section,
+    footer {
+      font-size: 20px;
+      text-align: center;
+      padding-top: 10px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <header>header 상단헤더</header>
+      <aside>aside 사이드 바</aside>
+      <section>section 메인 콘텐츠</section>
+      <footer>footer 하단 푸터</footer>
+    </div>
+  </body>
+</html>

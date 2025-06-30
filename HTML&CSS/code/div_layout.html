@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>div 요소 레이아웃</title>
+  </head>
+  <style>
+    .container {
+      width: 1400px;
+      margin: 0 auto; /*중앙 정렬*/
+    }
+    .header {
+      height: 60px;
+      background-color: #dddddd;
+    }
+    .sidebar {
+      width: 400px;
+      height: 300px;
+      float: left; /*수평 정렬을 위한*/
+      background-color: orange;
+    }
+    .section {
+      width: 1000px;
+      height: 300px;
+      float: right; /*수평 정렬을 위한*/
+      background-color: skyblue;
+    }
+    .footer {
+      clear: both; /*float 해제*/
+      height: 60px;
+      background-color: #dddddd;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="header">상단 헤더</div>
+      <div class="sidebar">사이드바</div>
+      <div class="section">메인 섹션</div>
+      <div class="footer">하단 푸터</div>
+    </div>
+  </body>
+</html>
