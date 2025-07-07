@@ -16,8 +16,8 @@
 
 ```jsx
 var first = 10;
-var second = 10.00;
-var third = 10e6;   // 10000000
+var second = 10.0;
+var third = 10e6; // 10000000
 var fourth = 10e-6; // 0.00001
 ```
 
@@ -26,10 +26,10 @@ var fourth = 10e-6; // 0.00001
 큰따옴표는 작은따옴표로 둘러싸인 문자열에만 포함될 수 있으며, 작은따옴표는 큰따옴표로 둘러싸인 문자열에만 포함될 수 있다.
 
 ```jsx
-var first = "홍길동";      // 큰따옴표를 사용한 문자열
-var second = '홍길동';     // 작은따옴표를 사용한 문자열
-var third = "이름은 '홍길동'입니다."  // 작은따옴표는 큰따옴표로 둘러싸인 문자열에만 포함될 수 있음.
-var fourth = '이름은 "홍길동"입니다.' // 큰따옴표는 작은따옴표로 둘러싸인 문자열에만 포함될 수 있음.
+var first = "홍길동"; // 큰따옴표를 사용한 문자열
+var second = "홍길동"; // 작은따옴표를 사용한 문자열
+var third = "이름은 '홍길동'입니다."; // 작은따옴표는 큰따옴표로 둘러싸인 문자열에만 포함될 수 있음.
+var fourth = '이름은 "홍길동"입니다.'; // 큰따옴표는 작은따옴표로 둘러싸인 문자열에만 포함될 수 있음.
 ```
 
 🔸 **불리언(boolean)**
@@ -43,8 +43,8 @@ ECMAScript 6부터 새롭게 추가된 타입이다.
 유일하고 변경할 수 없는 타입으로, 객체의 프로퍼티를 위한 식별자로 사용할 수 있다.
 
 ```jsx
-var sym = Symbol("javascript");  // symbol 타입
-var symObj = Object(sym);        // object 타입
+var sym = Symbol("javascript"); // symbol 타입
+var symObj = Object(sym); // object 타입
 ```
 
 **🔸 undefined**
@@ -65,21 +65,21 @@ var symObj = Object(sym);        // object 타입
 var dog = { name: "해피", age: 3 }; // 객체의 생성
 // 객체의 프로퍼티 참조
 document.getElementById("result").innerHTML =
-    "강아지의 이름은 " + dog.name + "이고, 나이는 " + dog.age + "살 입니다.";
+  "강아지의 이름은 " + dog.name + "이고, 나이는 " + dog.age + "살 입니다.";
 ```
 
 ### typeof 연산자
 
 ---
 
-피연산자의 타입을 반환하는 피연산자가 단 하나뿐인 연산자
+지정한 데이터 또는 변수에 저장된 자료형을 알고 싶을 때 사용
 
 ```jsx
-typeof 10;        // number 타입
-typeof "문자열";  // string 타입
-typeof true;      // boolean 타입
+typeof 10; // number 타입
+typeof "문자열"; // string 타입
+typeof true; // boolean 타입
 typeof undefined; // undefined 타입
-typeof null;      // object 타입
+typeof null; // object 타입
 ```
 
 ### null, undefined
@@ -93,14 +93,14 @@ undefined란 null과는 달리 ‘타입’이 정해지지 않은 것을 의미
 자바스크립트에서 undefined는 초기화되지 않은 변수나 존재하지 않는 값에 접근할 때 반환된다.
 
 ```jsx
-var num;          // 초기화하지 않았으므로 undefined 값을 반환함.
-var str = null;   // object 타입의 null 값
+var num; // 초기화하지 않았으므로 undefined 값을 반환함.
+var str = null; // object 타입의 null 값
 typeof secondNum; // 정의되지 않은 변수에 접근하면 undefined 값을 반환함.
 ```
 
 null과 undefined는 동등 연산자(==)와 일치 연산자(===)로 비교할 때 결과값이 다르므로 주의해야 한다.
 
 ```jsx
-null ==  undefined; // true
+null == undefined; // true
 null === undefined; // false
 ```
