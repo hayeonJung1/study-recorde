@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>숫자 맞추기 게임</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto; /*가운데 정렬*/
+      }
+
+      /*입력칸 타입 숫자로*/
+      .form input[type="number"] {
+        width: 200px; /*가로 사이즈*/
+      }
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>숫자 맞추기 게임</h1>
+    <p>
+      1과 100 사이의 무작위 숫자를 선택했습니다. <br />10턴 이내에 추측할 수
+      있는지 확인해 보세요. <br />추측이 너무 높았는지 너무 낮았는지
+      알려드리겠습니다.
+    </p>
+    <div class="form">
+      <label for="guessField">숫자를 입력하세요 : </label>
+      <!--required : 서버로 제출되기 전 반드시 채워져 있어야하는-->
+      <input
+        type="number"
+        min="1"
+        max="100"
+        required
+        id="guessField"
+        class="guessField"
+      />
+      <input type="submit" value="추측 제출" class="guessSubmit" />
+    </div>
+
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+
+    <script>
+      //randomNumber 변수는 1~100사이의 무작위 수를 할당
+      let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+      //guesses, lastResult, lowOrHi 세개의 상수는 HTML의 결과 문단을 가리키는 참조를 저장해서,
+      //나중에 문단에 텍스트를 삽입할 때 사용
+      const guesses = document.querySelector(".guesses");
+      const lastResult = document.querySelector(".lastResult");
+      const lowOrHi = document.querySelector(".lowOrHi");
+      // guessSubmit, guessField 두개의 상수는 추측한 숫자를 제출할 때 사용할 양식 텍스트 입력 칸과 제출의 참조를 저장
+      const guessSubmit = document.querySelector(".guessSubmit");
+      const guessField = document.querySelector(".guessField");
+      // guessCount, resetButton 두개의 변수는 플레이어가 사용한 턴 수인1과, 지금은 없지만 이 글의 뒤에서 추가할 초기화 버튼의 참조를 저장하기 위해 사용
+      let guessCount = 1;
+      let resetButton;
+      //재사용 할 수 있는 함수
+      //
+      function checkGuess() {
+        //userGuess라는 변수 선언, 텍스트 필드에 입력된 현재 값 저장
+        //값을 내장Number()로 감싼 이유는 확실하게 숫자 값으로 만들기 위해서
+        //변수의 값을 바꿀 계획이 없기에 const키워드로 선언
+        const userGuess = Number(guessField.value);
+        if (guessCount === 1) {
+          //조건이 참이면
+          // guesses 문단의 텍스트 내용을 Prievious guesses: 로 설정
+          guesses.textContent = "이전 추측: ";
+        }
+        // 아니면 아무것도 하지 않는다.
+        guesses.textContent += userGuess + " ";
+
+        if (userGuess === randomNumber) {
+          // 정답을 맞추면
+          //축하 메시지
+          lastResult.textContent = "축하합니다! 맞습니다!";
+          //글자색을 그린으로
+          lastResult.style.backgroundColor = "green";
+          //낮음/높음 힌트 박스의 내용을 지우고
+          lowOrHi.textContent = "";
+          //뒤에 다룰 함수인 setGameOver()를 호출
+          setGameOver();
+        } else if (guessCount === 10) {
+          lastResult.textContent = "!!!GAME OVER!!!";
+          lowOrHi.textContent = "";
+          setGameOver();
+        } else {
+          // 정답을 맞히지 못했고, 마지막 턴도 아닐때 실행
+          //  이런 메시지 레드색 글씨
+          lastResult.textContent = "실패!";
+          lastResult.style.backgroundColor = "red";
+          // 추측한 값이 정답 값보다 높은지 낮은지 확인 후 메시지 출력
+          if (userGuess < randomNumber) {
+            lowOrHi.textContent = "마지막 추측은 너무 낮았습니다!";
+          } else if (userGuess > randomNumber) {
+            lowOrHi.textContent = "마지막 추측은 너무 높았습니다!";
+          }
+        }
+
+        // 다음 추측을 제출받기 위한 준비
+        guessCount++;
+        // 양식 텍스트 필드에 입력된 값 지우기
+        guessField.value = "";
+        // 포커스를 부여하여 다음 추측을 입력할 수 있게하기
+        guessField.focus();
+      }
+      //이벤트 수신기 추가
+      //addEventListener() -> 두 개의 입력 값을 받는 메서드
+      // click을 가리키는 문자열과, 이벤트가 발생하면 실행할 코드 checkGuess() 함수
+      guessSubmit.addEventListener("click", checkGuess);
+
+      function setGameOver() {
+        // 두 줄은 텍스트 입력 칸과 제출 버튼의 disabled 속성을 true로 설정해서 비활성화한다.
+        // 비활성화 하지 않으면 게임이 끝난 뒤에도 플레이어가 정답을 추가로 입력해서 게임을 망가뜨릴 수 있기 때문에
+        guessField.disabled = true;
+        guessSubmit.disabled = true;
+        // 새로운 <button> 요소를 생성
+        resetButton = document.createElement("button");
+        // 텍스트 레이블을 설정
+        resetButton.textContent = "Start new game";
+        document.body.append(resetButton);
+        // 새로 추가한 버튼에 이벤트 수신기 부착
+        // 클릭하면 resetGame() 함수 호출
+        resetButton.addEventListener("click", resetGame);
+      }
+
+      // 모든 것을 초기화 -> 새로운 게임 시작
+      function resetGame() {
+        guessCount = 1;
+        // 모든 정보 텍스트 문단의 내용을 지우기
+        const resetParas = document.querySelectorAll(".resultParas p");
+        for (const resetPara of resetParas) {
+          resetPara.textContent = "";
+        }
+        //HTML에서 초기화 버튼을 제거
+        resetButton.parentNode.removeChild(resetButton);
+        // 양식 요소를 다시 활성화
+        guessField.disabled = false;
+        guessSubmit.disabled = false;
+        // 입력칸 비우기
+        guessField.value = "";
+        // 포커스를 부여
+        guessField.focus();
+        // 배경색 제거
+        lastResult.style.backgroundColor = "white";
+        // 무작위 숫자를 새로 선택
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+      }
+    </script>
+  </body>
+</html>
