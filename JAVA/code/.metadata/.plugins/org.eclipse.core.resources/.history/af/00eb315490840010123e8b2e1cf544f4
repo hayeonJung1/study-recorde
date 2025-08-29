@@ -1,0 +1,24 @@
+package mypack;
+
+public class Test05 {
+
+	public static void main(String[] args) {
+		//돈까스 16인분, 칼국수 8인분, 왕만두 1인분을 시켰을때, 계산서를 출력 예와 같이 작성해 주세요.
+		//돈까스: 8000원, 칼국수: 6000원, 왕만두: 5000원
+		
+		String menu1="돈가스";
+		String menu2="칼국수";
+		String menu3="왕만두";
+		int menu1price=8000;
+		int menu2price=6000;
+		int menu3price=5000;
+		
+		System.out.println(menu1+"X"+16+"="+(menu1price*16));
+		System.out.println(menu2+"X"+8+"="+(menu2price*8));
+		System.out.println(menu3+"X"+1+"="+(menu2price*1));
+		System.out.println("==============================");
+		System.out.println();
+		
+	}
+
+}

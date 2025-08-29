@@ -1,0 +1,23 @@
+package mypack;
+
+public class Test04 {
+
+	public static void main(String[] args) {
+		//printf() 메소드를 사용하여, 쇼핑 리스트를 깔끔하게 출력해봅시다.
+		String item1="한우 꽃등심";
+		int price1=112500;
+		String item2="참치 선물팩";
+		int price2=25500;
+		String item3="맥스봉 한팩";
+		int price3=5000;
+		
+		//형식 출력
+		System.out.printlf();
+		System.out.printlf();
+
+		System.out.printlf();
+
+
+	}
+
+}

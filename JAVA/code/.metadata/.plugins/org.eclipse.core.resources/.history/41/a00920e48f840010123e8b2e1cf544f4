@@ -1,0 +1,12 @@
+package mypack;
+
+public class Test05 {
+
+	public static void main(String[] args) {
+		//돈까스 16인분, 칼국수 8인분, 왕만두 1인분을 시켰을때, 계산서를 출력 예와 같이 작성해 주세요.
+		//돈까스: 8000원, 칼국수: 6000원, 왕만두: 5000원
+		
+		String menu1="돈가스"
+	}
+
+}

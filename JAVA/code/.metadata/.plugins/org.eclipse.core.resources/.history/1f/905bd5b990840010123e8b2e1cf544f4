@@ -1,0 +1,32 @@
+package mypack;
+
+public class Test05 {
+
+	public static void main(String[] args) {
+		//돈까스 16인분, 칼국수 8인분, 왕만두 1인분을 시켰을때, 계산서를 출력 예와 같이 작성해 주세요.
+		//돈까스: 8000원, 칼국수: 6000원, 왕만두: 5000원
+		
+		//내가 푼 문제
+		String menu1="돈가스";
+		String menu2="칼국수";
+		String menu3="왕만두";
+		int menu1price=8000;
+		int menu2price=6000;
+		int menu3price=5000;
+		
+		System.out.println(menu1+" X "+16+" = "+(menu1price*16));
+		System.out.println(menu2+" X "+8+" = "+(menu2price*8));
+		System.out.println(menu3+" X "+1+" = "+(menu3price*1));
+		System.out.println("===============");
+		System.out.println("총합 : "+((menu1price*16)+(menu2price*8)+(menu3price*1)));
+		
+		//좀 더 가독성 있는 코드
+        int donPrice = 8000; // 돈가스 가격
+        int kalPrice = 10000; // 칼국수
+        int kingPrice = 5000; // 왕만두
+        int donNumber = 16; // 돈가스 수량
+        int kalNumber = 8; // 칼국수
+        int kingNumber = 1; // 왕만두
+	}
+
+}

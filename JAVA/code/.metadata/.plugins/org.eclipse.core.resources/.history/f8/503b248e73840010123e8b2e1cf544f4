@@ -1,0 +1,11 @@
+package mypack;
+
+public class Test {
+	public static void main(String[] args) {
+		int a=3;
+		++a;		// a값에 1을 더하라는 명령
+		System.out.println(a);
+		
+	}
+
+}
